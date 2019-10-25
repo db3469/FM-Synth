@@ -1,0 +1,164 @@
+* {
+  scrollbar-color: dark;
+  font-family: 'Aldrich';font-size: 14px;
+}
+
+.synth-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 80vh;
+  position: relative;
+  min-height: 600px;
+  min-width: 600px;
+}
+
+.right-sidebar{
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  justify-content:space-between;
+}
+
+.title-bar-container{
+  background-color: BurlyWood;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+}
+
+.title-bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title-logo{
+  align-self: center;
+  margin: 5px;
+}
+
+.title-text{
+  align-self: center;
+  font-size: 2em;
+  margin: 5px;
+}
+
+.usage-text{
+  overflow: auto;
+  background-color: Bisque;
+  flex: 1;
+  padding: 15px;
+}
+
+.credits-footer{
+  background-color: BurlyWood;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.credits-text{
+  align-self: center;
+  margin: 20px;
+}
+
+.main-area{
+  flex: 7;
+  flex-direction: column;
+  display: flex;
+}
+
+.synth-area{
+  background-image: linear-gradient(Navajowhite, Tan);
+  display: flex;
+  flex: 8;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.synth-element{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  background-image: linear-gradient( Burlywood,Navajowhite);
+  width: 15%;
+  height: 35%;
+  border: 2px solid;
+  border-image-source: linear-gradient(45deg, Sienna, Peru);
+  border-image-slice: 1;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  font-size: 1.5em;
+}
+
+.footer{
+  background-color: Navajowhite;
+  flex: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.keyboard-container{
+  border: 5px solid;
+  border-color: transparent;
+  position: relative;
+  display:flex;
+  flex-direction: row;
+  width: 400px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 100%;
+  justify-content: space-between;
+  border-width: 5;
+}
+
+.white-key{
+  background-image: linear-gradient(White, Silver);
+  /*width: 100%;
+  height: 100%;*/
+  flex:1;
+  border: 2.5px solid;
+  border-color: black;
+  border-radius: 0px 0px 10px 10px;
+}
+.white-key:hover {background-image: linear-gradient(silver, silver)}
+.white-key:active {background-image: linear-gradient(white, white)}
+
+
+
+.black-key{
+position: absolute;
+    background-image: linear-gradient(Black, Gray);
+    /* width: 100%; */
+    /* height: 30px; */
+    bottom: 30%;
+    top: 0px;
+    width: 30px;
+    border: 2.5px solid;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.black-key:hover {
+  background-image: linear-gradient(Gray, Gray);
+
+}
+.black-key:active {
+  background-image: linear-gradient(black, black)
+}
+
+
+
+.slider-width80
+{
+    width: 80px;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FM Synth</title>
+    <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.0.1/Tone.min.js"></script>  
+    <script type="text/javascript" src="fm-synth.js"></script>  
+    <link rel="stylesheet" href="fm-synth.css">
+  </head>
+  <body>
+    <div class='synth-container' id="synthContainer">
+      <div class='main-area'>        
+        <div class='synth-area'>
+          <div class='synth-element'>
+            <div>Note:</div>
+            <div id="synthElementNote">0</div>
+          </div>
+          <div class='synth-element'>
+            <div  font-size="1.5em">Freq:</div>
+            <div id="synthElementFreq">0</div>
+          </div>
+          <div class='synth-element'>
+            <div  font-size="1.5em">Octave</div>
+            <div id="synthElementOctave">0</div>
+          </div>
+        </div>    
+        <div class='synth-area'>
+          <div class='synth-element' id="synthElementModIndex">
+            <div>Mod Index</div>
+             <input class="slider-width80" id="modSlider"
+                    type="range" oninput="modSliderFunction(this.value)" 
+                    min="1" max="40" value="12">  
+             <div id="synthElementModIndexValue">12</div> 
+          </div> 
+          <div class='synth-element' id="synthElementHarmonicity">
+            <div>Harmonicity</div>
+            <input class="slider-width80" id="harmSlider"
+                   type="range" oninput="harmSliderFunction(this.value)"
+                   min="0.5" max="4.0" value="3" step="0.1">    
+            <div id="synthElementHarmonicityValue">3</div>
+          </div>         
+          <div class='synth-element' id="synthElementPingPong">
+            <div>Delay Mix</div>
+              <input class="slider-width80" 
+                    type="range" oninput="pingPongSliderFunction(this.value)"
+                    min="0.0" max="1.0" value="0.5" step="0.1">    
+            <div id="synthElementPingPongValue">0.5</div>
+          </div> 
+          <div class='synth-element' id="synthElementChorus">
+            <div>Chorus Speed</div>
+            <input class="slider-width80" 
+                   type="range" oninput="chorusSliderFunction(this.value)"
+                    min="0" max="20" value="4" step="0.1">    
+            <div id="synthElementChorusValue">4</div>
+          </div> 
+          <div class='synth-element' id="synthElementVolume">
+            <div>Volume</div>
+            <input class="slider-width80" 
+                   type="range" oninput="volumeSliderFunction(this.value)"
+                    min="0" max="1" value="0.5" step="0.1">    
+            <div id="synthElementVolumeValue">0.5</div>
+          </div> 
+        </div>
+        <div class='footer'> <!-- keyboard footer -->
+          <div class='keyboard-container' id="keyCont">
+            <div class='white-key' id='midi-60'></div>
+            <div class='black-key' id='midi-61' style='left:calc(50px - 16px);'></div>
+            <div class='white-key' id='midi-62'></div>
+            <div class='black-key' id='midi-63' style='left:calc(100px - 16px);'></div>
+            <div class='white-key' id='midi-64' ></div>
+            <div class='white-key' id='midi-65' ></div>
+            <div class='black-key' id='midi-66' style='left:calc(200px - 16px);'></div>            
+            <div class='white-key' id='midi-67' ></div>
+            <div class='black-key' id='midi-68'  style='left:calc(250px - 16px);'></div>                       
+            <div class='white-key' id='midi-69' ></div>
+            <div class='black-key' id='midi-70' style='left:calc(300px - 16px);'></div>                        
+            <div class='white-key' id='midi-71' ></div>
+            <div class='white-key' id='midi-72' ></div>
+          </div>
+        </div>
+      </div>
+      <div class='right-sidebar'>
+        <div class='title-bar-container'>
+          <div class='title-bar'>
+            <div class = 'title-text'>FM-SYNTH</div>
+            <div class='title-logo'><img src='https://i.ibb.co/LhBsw5v/fm-logo.png'/></div>
+          </div>
+        </div>
+        <div class='usage-text'>
+          The FM Synth is an instrument doing frequency modulation synthesis. This is very different than our other synthesizers like the Simple, which is doing subtractive synthesis.
+          <ul>
+            <li>FM synthesis means that you create a complex waveform by modulating a simple waveform with another simple waveform.</li>
+            <li>This is done using waveforms of different frequencies and amplitudes to kind of mangle, distort and change the sound into something more complex and interesting.</li>
+          </ul>
+We wont dig deep here in how to use it to create complex sounds. But you can find lots of great material on FM synthesis using a search engine!
+        </div>
+        <div class='credits-footer'>
+          <div class = 'credits-text'><em>Made by David Black</em></div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
+
